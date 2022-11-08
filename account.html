@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>e-commerce | sample</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/fontawesome.min.css" />
+  </head>
+  <body>
+      <div class="container">
+        <div class="navbar">
+          <div class="logo">
+            <h1>ASTONISHING<span>Store</span></h1>
+          </div>
+          <nav>
+            <ul id="MenuItems">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="productInfo.html">About</a></li>
+              <li><a href="account.html">Account</a></li>
+            </ul>
+          </nav>
+          <a href="cart.html"><i class="fas fa-cart-plus"></i></a>
+          <i class="fas fa-bars" onclick="menuToggle()"></i>
+        </div>
+      </div>
+
+<!-- Account Page -->
+
+        <div class="account-page">
+             <div class="container">
+                <div class="row">
+                    <div class="col-2">
+                        <img src="png/kindpng_1154996.png" alt="">
+                    </div>
+                    <div class="col-2">
+                        <div class="form-container">
+                            <div class="form-btn">
+                                <span onclick="login()">Login</span>
+                                <span onclick="register()">Register</span>
+                                <hr id="indicator">
+                            </div>
+                            <form id="LoginForm">
+                                <input type="text" placeholder="Username">
+                                <input type="password" placeholder="Password">
+                                <button type="submit" class="btn">Login</button>
+                                <a href="#">Forgot password?</a>
+                            </form>
+                            <form id="RegForm">
+                                <input type="text" placeholder="Username">
+                                <input type="email" placeholder="Email">
+                                <input type="password" placeholder="Password">
+                                <button type="submit" class="btn">Register</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+     <!-- footer -->
+
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col-1">
+            <h3>Download Our App</h3>
+            <p>Download App for Android and iOS mobile phones.</p>
+            <div class="app-logo">
+              <img src="png/appstore&playstore.png" alt="appstore logo">
+            </div>
+          </div>
+          <div class="footer-col-2">
+            <img src="png/apple pay.png" class="footer-img" alt="apple pay logo"/>
+            <p>
+              Our purpose is to provide pleasure and make benefits of
+              sports and be accessible to many.
+            </p>
+          </div>
+          <div class="footer-col-3">
+            <h3>Useful Links<h3>
+              <ul>
+                <li>Coupons</li>
+                <li>Blog Post</li>
+                <li>Return Policy</li>
+                <li>Join Affiliate</li>
+              </ul>
+          </div> 
+          <div class="footer-col-4">
+            <h3>Follow US<h3>
+              <ul>
+                <li>Facebook</li>
+                <li>Twitter</li>
+                <li>Instagram</li>
+                <li>Youtube</li>
+              </ul>
+          </div>
+        </div>
+        <hr>
+        <p class="copyright">Copyright 2022 e-Commerce Sample</p>
+      </div>
+    </div>
+         <script>
+                    //Account Page script toggle form
+
+            let LoginForm = document.getElementById("LoginForm");
+            var RegForm = document.getElementById("RegForm");
+            var indicator = document.getElementById("indicator");
+
+            function register() {
+            RegForm.style.transform = "translateX(0px)";
+            LoginForm.style.transform = "translateX(0px)";
+            indicator.style.transform = "translateX(100px)";
+            }
+
+            function login() {
+            RegForm.style.transform = "translateX(300px)";
+            LoginForm.style.transform = "translateX(300px)";
+            indicator.style.transform = "translateX(0px)";
+            }
+        </script>
+  </body>
+</html>
+
